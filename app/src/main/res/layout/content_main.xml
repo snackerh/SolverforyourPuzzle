@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="snacker.puzzlesolver.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <TextView
+        android:text="Select Puzzle:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textSize="18sp"
+        android:layout_weight="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioGroup
+        android:text="Select Puzzle"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/SelectPuzzle"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true">
+
+    <RadioButton
+        android:text="Sudoku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SelectSudoku"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true"
+        />
+
+        <RadioButton
+        android:text="Nonogram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SelectNono"
+        android:layout_below="@+id/SelectSudoku"
+        android:layout_alignStart="@+id/SelectSudoku"
+        />
+
+        <RadioButton
+            android:text="Kakuro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SelectKakuro"
+            android:layout_below="@+id/SelectNono"
+            android:layout_alignStart="@+id/SelectNono"
+            />
+    </RadioGroup>
+
+    <Button
+        android:text="Go!"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_marginStart="25dp"
+        android:layout_alignTop="@+id/SelectPuzzle"
+        android:layout_toEndOf="@+id/SelectPuzzle" />
+
+    <EditText
+        android:id="@+id/HeightText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_marginEnd="38dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="5"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/WidthText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_below="@+id/SelectPuzzle"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="5"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/WidthText"
+        android:text="Width"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/WidthText"
+        android:layout_alignStart="@+id/button" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/WidthText"
+        android:layout_marginTop="20dp"
+        android:text="Open Existing Puzzles" />
+
+</RelativeLayout>
